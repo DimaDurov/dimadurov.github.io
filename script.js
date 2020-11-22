@@ -1,105 +1,317 @@
-/* Please ❤ this if you like it! */
+gsap.from(".hero__image", {
+  scale: 8,
+  transformOrigin: "center center",
+  ease: "expo",
+  scrollTrigger: {
+    trigger: ".hero__image",
+    start: "center center",
+    end: "center top",
+    pin: true,
+    scrub: 0.5
+  }
+});
 
+gsap.to(".ring--right", {
+  scale: 5,
+  ease: "power4",
+  transformOrigin: "center",
+  scrollTrigger: {
+    trigger: ".ring--right",
+    start: "top center",
+    end: "bottom+=300 200px",
+    pin: true,
+    scrub: 0.25
+  }
+});
 
-(function($) { "use strict";
- 
- 	//Parallax            
-              
-	function scrollBanner() {
-	  $(document).on('scroll', function(){
-      var scrollPos = $(this).scrollTop();
-        $('.parallax-fade-top').css({
-          'top' : (scrollPos/2)+'px',
-          'opacity' : 1-(scrollPos/700)
-        });
-        $('.parallax-00').css({
-          'top' : (scrollPos/-3.5)+'px'
-        });
-        $('.parallax-01').css({
-          'top' : (scrollPos/-2.8)+'px'
-        });
-        $('.parallax-top-shadow').css({
-          'top' : (scrollPos/-2)+'px'
-        });
-      });    
-	  }
-	scrollBanner();	              
+gsap.to(".ring--left", {
+  scale: 3,
+  ease: "power4",
+  transformOrigin: "center center",
+  scrollTrigger: {
+    trigger: ".ring--left",
+    start: "center+=100% center",
+    end: "bottom+=300 top",
+    pin: true,
+    scrub: 0.25
+  }
+});
 
-	//Page cursors
+gsap.to(".hero__title--1", {
+  xPercent: -50,
+  scrollTrigger: {
+    trigger: ".hero__title--1",
+    start: "center center",
+    pin: true,
+    scrub: 0.5
+  }
+});
 
-    document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
-        t.style.left = n.clientX + "px", 
-		t.style.top = n.clientY + "px", 
-		e.style.left = n.clientX + "px", 
-		e.style.top = n.clientY + "px", 
-		i.style.left = n.clientX + "px", 
-		i.style.top = n.clientY + "px"
+gsap.to(".hero__title--2", {
+  xPercent: 50,
+  scrollTrigger: {
+    trigger: ".hero__title--2",
+    start: "center center",
+    pin: true,
+    scrub: 0.5
+  }
+});
+
+gsap.to(".hero__copy", {
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".hero__copy",
+    start: "top 60%",
+    end: "+=60 60%",
+    pin: false,
+    scrub: 0.5
+  }
+});
+
+gsap.to(".cross-1", {
+  rotate: "+=360",
+  scrollTrigger: {
+    trigger: ".cross-1",
+    start: "bottom bottom",
+    end: "bottom top",
+    pin: false,
+    scrub: 0.5
+  }
+});
+
+gsap.to(".cross-2", {
+  rotate: 360 * 4,
+  scrollTrigger: {
+    trigger: ".cross-2",
+    start: "bottom bottom",
+    end: "bottom top",
+    pin: false,
+    scrub: 0.5
+  }
+});
+
+gsap.to(".box", {
+  y: 500,
+  x: "-10vw",
+  ease: "power.in",
+  scrollTrigger: {
+    trigger: ".box",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true
+  }
+});
+
+gsap.from(".line", {
+  scaleX: 0,
+  transformOrigin: "left center",
+  ease: "power.in",
+  scrollTrigger: {
+    trigger: ".line",
+    start: "center 75%",
+    end: "bottom 10%",
+    scrub: 0.5,
+    pin: false
+  }
+});
+
+gsap.to(".big", {
+  x: "-130vw",
+  transformOrigin: "center center",
+  scrollTrigger: {
+    trigger: ".big",
+    start: "top 62%",
+    end: "bottom top-=200",
+    pin: true,
+    scrub: 1.75
+  }
+});
+
+gsap.to(".cards", {
+  scale: 1.75,
+  scrollTrigger: {
+    trigger: ".cards",
+    start: "center center",
+    end: "bottom top",
+    pin: true,
+    scrub: true
+  }
+});
+
+gsap.to(".card-1", {
+  rotate: -20,
+  scale: 0.75,
+  x: -200,
+  transformOrigin: "bottom center",
+  scrollTrigger: {
+    trigger: ".cards",
+    start: "center center",
+    end: "bottom top",
+    pin: true,
+    scrub: true
+  }
+});
+
+gsap.to(".card-3", {
+  rotate: 20,
+  scale: 0.75,
+  x: 200,
+  transformOrigin: "bottom center",
+  scrollTrigger: {
+    trigger: ".cards",
+    start: "center center",
+    end: "bottom top",
+    pin: true,
+    scrub: true
+  }
+});
+
+gsap.from(".hero__copy span", {
+  opacity: 0,
+  duration: 1,
+  y: 40,
+  delay: 0.5,
+  ease: "power2.inOut"
+});
+
+let titleOne = new SplitText(".hero__title--1", { type: "words" });
+let oneWords = titleOne.words;
+
+gsap.from(oneWords, {
+  opacity: 0,
+  duration: 1.5,
+  y: 80,
+  ease: "power4",
+  stagger: {
+    each: 0.15
+  }
+});
+
+let titleTwo = new SplitText(".hero__title--2", { type: "words" });
+let twoWords = titleTwo.words;
+
+gsap.from(twoWords, {
+  opacity: 0,
+  duration: 1.5,
+  y: 80,
+
+  delay: 0.25,
+  ease: "power4",
+  stagger: {
+    each: 0.15
+  }
+});
+
+gsap.to(".cross-3", {
+  rotate: 360 * 2,
+  y: 150,
+  scrollTrigger: {
+    scrub: 0.5,
+    start: "bottom bottom",
+    end: "bottom -300px",
+    trigger: ".cross-3",
+    pin: false
+  }
+});
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".footer__link",
+    start: "top 75%"
+  }
+});
+
+tl.from(".footer__link", {
+  opacity: 0,
+  y: 90,
+  duration: 2,
+  ease: "expo.out"
+})
+  .from(
+    ".footer__copy",
+    {
+      opacity: 0,
+      y: 90,
+      duration: 2,
+      ease: "expo.out"
+    },
+    "-=1.75"
+  )
+  .from(
+    ".footer__button",
+    {
+      opacity: 0,
+      y: 90,
+      duration: 2,
+      ease: "power3.out"
+    },
+    "-=1.75"
+  );
+
+// ScrollTrigger.addEventListener("scrollEnd", () => {
+//   document.querySelector('.cross-1').classList.add('scroll-end')
+// });
+
+// ScrollTrigger.addEventListener("scrollStart", () => {
+//   document.querySelector('.cross-1').classList.remove('scroll-end')
+// });
+
+gsap.fromTo(
+  ".hero__image",
+  {
+    opacity: 0,
+    objectPosition: "center 0%",
+    y: 100
+  },
+  {
+    opacity: 1,
+    duration: 2,
+    objectPosition: "center 15%",
+    y: 0,
+    ease: "expo.inOut"
+  }
+);
+
+gsap.set(".cursor", { force3D: true });
+document.addEventListener("mousemove", (e) => {
+  let x = e.clientX;
+  let y = e.clientY;
+
+  gsap.to(".cursor", {
+    x: x - 16,
+    y: y - 16,
+    ease: "power3"
+  });
+});
+
+document.body.addEventListener("mouseleave", () => {
+  gsap.to(".cursor", {
+    scale: 0,
+    duration: 0.1,
+    ease: "none"
+  });
+});
+
+document.body.addEventListener("mouseenter", () => {
+  gsap.to(".cursor", {
+    scale: 1,
+    duration: 0.1,
+    ease: "none"
+  });
+});
+
+let hoverCursors = document.querySelectorAll('[data-cursor="hover"]');
+
+hoverCursors.forEach(function (cursor) {
+  cursor.addEventListener("mouseenter", () => {
+    gsap.to(".cursor", {
+      scale: 2.5
     });
-    var t = document.getElementById("cursor"),
-        e = document.getElementById("cursor2"),
-        i = document.getElementById("cursor3");
-    function n(t) {
-        e.classList.add("hover"), i.classList.add("hover")
-    }
-    function s(t) {
-        e.classList.remove("hover"), i.classList.remove("hover")
-    }
-    s();
-    for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
-        o(r[a])
-    }
-    function o(t) {
-        t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
-    }              
-              
-  
-//Scroll back to top
-              
-$(document).ready(function() {	
-		var offset = 300;
-		var duration = 400;
-		jQuery(window).on('scroll', function() {
-			if (jQuery(this).scrollTop() > offset) {
-				jQuery('.scroll-to-top').addClass('active-arrow');
-			} else {
-				jQuery('.scroll-to-top').removeClass('active-arrow');
-			}
-		});				
-		jQuery('.scroll-to-top').on('click', function(event) {
-			event.preventDefault();
-			jQuery('html, body').animate({scrollTop: 0}, duration);
-			return false;
-		})
-  
-  		
-		/* Hero Case study images */			
-		
-		$('.case-study-name:nth-child(1)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(1)').addClass("show");
-			$('.case-study-name:nth-child(1)').addClass('active');
-		})
-		$('.case-study-name:nth-child(2)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(2)').addClass("show");
-			$('.case-study-name:nth-child(2)').addClass('active');
-		})
-		$('.case-study-name:nth-child(3)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(3)').addClass("show");
-			$('.case-study-name:nth-child(3)').addClass('active');
-		})
-		$('.case-study-name:nth-child(4)').on('mouseenter', function() {
-			$('.case-study-name.active').removeClass('active');
-			$('.case-study-images li.show').removeClass("show");
-			$('.case-study-images li:nth-child(4)').addClass("show");
-			$('.case-study-name:nth-child(4)').addClass('active');
-		})
-		$('.case-study-name:nth-child(1)').trigger('mouseenter')
-  
-  });            
-              
-})(jQuery);
+  });
+
+  cursor.addEventListener("mouseleave", () => {
+    gsap.to(".cursor", {
+      scale: 1
+    });
+  });
+});
