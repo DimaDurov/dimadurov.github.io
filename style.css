@@ -1,4 +1,4 @@
-
+я
 .main {
   background: #E34B48;
 
@@ -29,6 +29,7 @@ body {
     background: -webkit-gradient(linear, left top, left bottom, from(#E34B48), to(#270738));
     background: linear-gradient(#E34B48, #270738);
     height: auto;
+    width: 100%;
     top: 0;
     padding-bottom: 5em;
 
