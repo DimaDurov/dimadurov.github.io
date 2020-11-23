@@ -1,6 +1,13 @@
 
+.main {
+  background: #E34B48;
 
+}
 
+.main-text {
+  color: #E34B48 !important;
+  font-weight: 200;
+}
 
 p {
   font-family: Work Sans;
@@ -18,9 +25,12 @@ a.underline {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background: -webkit-gradient(linear, left top, left bottom, from(#E34B48), to(#270738));
-  background: linear-gradient(#E34B48, #270738);
+    font-family: 'Montserrat', sans-serif;
+    background: -webkit-gradient(linear, left top, left bottom, from(#E34B48), to(#270738));
+    background: linear-gradient(#E34B48, #270738);
+    height: auto;
+    top: 0;
+    padding-bottom: 5em;
 
 }
 
@@ -102,8 +112,6 @@ body {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-
-
 
 .land {
   height: 100vh;
