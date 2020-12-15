@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["about"],{f820:function(t,e,n){"use strict";n.r(e);var u=function(){var t=this,e=t.$createElement;t._self._c;return t._m(0)},a=[function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{staticClass:"about"},[n("p",[t._v("\n   Мой Github:\n  ")]),n("br"),n("p",[n("a",{attrs:{href:"https://github.com/DimaDurov/"}},[t._v("https://github.com/DimaDurov/")])])])}],r=n("2877"),s={},i=Object(r["a"])(s,u,a,!1,null,null,null);e["default"]=i.exports}}]);
+//# sourceMappingURL=about.0d5efb7c.js.map
