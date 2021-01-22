@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>DimaDurov</title>
+		<meta name="description" content="A draggable menu that shows a thumbnail preview of an image grid" />
+		<meta name="keywords" content="draggable, menu, navigation, thumbnails, grid, javascript, gsap, web design, layout" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="https://use.typekit.net/crf4rue.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="loading">
+		<main>
+			<div class="frame">
+				<div class="frame__pagetitle">Портфолио</div>
+				<div class="frame__links">
+					<a href="https://t.me/dima_durov">Telegram</a>
+					<a href="https://www.figma.com/file/4ttxc8JaOGZQ2FfM5rGQWm/DurovWorks?node-id=0%3A1">Figma</a>
+					<a href="https://github.com/DimaDurov">GitGub</a>
+
+				</div>
+			</div>
+			<div class="page page--preview">
+				<div class="grid-wrap">
+					<div class="grid grid--layout-1">
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(img/1.jpg)"></div></div>
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(img/2.jpg)"></div></div>
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(img/3.jpg)"></div></div>
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(img/4.jpg)"></div></div>
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(https://sun9-24.userapi.com/impg/c858424/v858424276/12bb58/BvZ-BPaO8jM.jpg?size=2560x1600&quality=96&proxy=1&sign=3143ed86a5d98da1a4fefe80248bcf4a&type=album)"></div></div>
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(https://sun9-62.userapi.com/impg/8kGLieC81HJmtjlIXqyB_42U1WfRvGCQY8Lerw/uW2EyXnKvs0.jpg?size=1368x912&quality=96&proxy=1&sign=657ffa205d458a8d3ec3e8d7632aa86a&type=album)"></div></div>
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(https://sun9-33.userapi.com/impg/mQM78eLfGzNZhk4sEP7Cb1p02ju4rrsQ3ID40Q/2X0itU8JDtc.jpg?size=2560x1600&quality=96&proxy=1&sign=49b7fb06aa922e3e91849a16516cc047&type=album)"></div></div>
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(https://sun9-45.userapi.com/impg/4yskCWWluQO5ZI9k3kEjgjZ1IQVB77PnjlSBjw/C4umDEW5ync.jpg?size=703x2160&quality=96&proxy=1&sign=184da6044bce94b445d25991e9544f0b&type=album)"></div></div>
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(https://sun9-19.userapi.com/impg/c854124/v854124064/206932/2WbZYpAguh4.jpg?size=1440x900&quality=96&proxy=1&sign=fa9578d4360e4d3428b532f8a2f4868d&type=albums)"></div></div>
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(https://sun9-61.userapi.com/impg/FZ9vLGNC7pjcYgDM0po7jN1W5REoHniC270Zdw/Vu8ISZbsS0Y.jpg?size=2560x1600&quality=96&proxy=1&sign=4b57880f6ecac75c44558f1f5bf72387&type=album)"></div></div>
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(https://sun9-41.userapi.com/impg/c857616/v857616339/142f32/4GWiZxwxV_Y.jpg?size=1280x846&quality=96&proxy=1&sign=695b68edb55e6d9cdbbf10545b5f4bd1&type=album)"></div></div>
+
+					</div>
+					<div class="grid grid--layout-2">
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(https://tuhub.ru/sites/default/files/2018-02/vuejs-logo_0.jpg)"></div></div>
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(https://sun9-24.userapi.com/impg/c858424/v858424276/12bb58/BvZ-BPaO8jM.jpg?size=2560x1600&quality=96&proxy=1&sign=3143ed86a5d98da1a4fefe80248bcf4a&type=album)"></div></div>
+
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(img/12.jpg)"></div></div>
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(img/13.jpg)"></div></div>
+						<div class="grid__item-wrap"><div class="grid__item" style="background-image: url(img/17.jpg)"></div></div>
+
+					</div>
+					
+					<button class="gridback"><svg width="27px" height="15px" viewBox="0 0 27 15"><path d="M1.469 6.75l-.719.719 7.938 6.937.718-.719L1.47 6.75zM8.594.531L.75 7.375l.688.688L9.28 1.218 8.594.53zM1.406 6.938v1h24.75v-1H1.406z" fill="#de6565"/></svg></button>
+				</div><!-- /grid-wrap -->
+			</div><!-- /page -->
+			<div class="menu-wrap">
+				<div class="menu-draggable"></div>
+				<nav class="menu">
+					<div class="menu__item">
+						<a class="menu__item-link">UX/UI</a>
+						<a href="portfolio/index.html"class="menu__item-explore">Смотреть</a>
+					</div>
+					<div class="menu__item">
+						<a class="menu__item-link">Front-end</a>
+						<a class="menu__item-explore">Смотреть</a>
+					</div>
+					
+				</nav><!--menu-->
+			</div><!--/menu-wrap-->
+		</main>
+		<div class="cursor">
+			<div class="cursor__inner cursor__inner--circle">
+				<div class="cursor__side cursor__side--left"></div>
+				<div class="cursor__side cursor__side--right"></div>
+			</div>
+		</div>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/charming.min.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/draggabilly.pkgd.min.js"></script>
+		<script src="js/demo.js"></script>
+	</body>
+</html>
